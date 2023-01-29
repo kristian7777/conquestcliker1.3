@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.item6 { grid-area: menu2; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu2 footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<!--<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>-->
+
+<div class="grid-container">
+  <div class="item1">title</div>
+  <div class="item2"><p id="cookie-text">Cookies: 0</p>
+ 
+    <button style="height:200px;width:200px"id="cookieImage" value="Bake a cookie" onClick='bakeCookie()'>Bake cookie button</button>
+  <!--<input id="cookieImage" type='button' value="Bake a cookie" onClick='bakeCookie()'> -->
+  <!--<button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>-->
+  <!--<input class='upgrade' type='button' value='Hire a Baker' onClick="hireBaker()">-->
+  <!--<button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker button</button>-->
+  <!--<input type="button" class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>-->
+  <!--<button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>-->
+  <!--<input class="upgrade" type='button' value='Hire an Auto Baker' onClick='hireAutoBaker()'>-->
+
+  <br>
+  <p id='cpc-text'>Cookies per Click: 1</p>
+  <p id='cps-text'>Cookies per Second: 0</p>
+ 
+ 
+  <p id='bakerPriceText'>baker price=/</p></div>
+  <div class="item3">animation images</div>  
+  <div class="item4"><section>
+    <p algn="right">
+    <button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>
+    </p>
+    
+    <p algn="right">
+    <button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker button</button>
+    </p>
+    
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p>
+    <p algn="right">
+    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
+    </p></div>
+  <div class="item6">map info</div>
+  <div class="item5">map</div>
+
+</div>
+
+<script>
+    var cookies = 0;
+    var cpc = 1;
+    var cps = 0;
+    var bakerPrice = 20;
+    var superBakerPrice = 150;
+    var developmentMode = true;
+    const fps = 30;
+ 
+    if(developmentMode === true) {
+      cookies = 100000000;
+    }
+ 
+ 
+    function hireSuperBaker() {
+      if(cookies >=  superBakerPrice) {
+        cookies -= superBakerPrice;
+        cpc += 3;
+        bakerPrice = Math.round(superBakerPrice * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cpc-text').innerHTML = "Cookies per Click: " + cpc;
+      }
+    }
+ 
+ 
+ 
+ 
+ 
+    function bakeCookie() {
+      cookies += cpc;
+      document.getElementById('cookie-text').innerHTML = "Cookies: " + cookies;
+ 
+    }
+ 
+    function hireBaker() {
+      if(cookies >= bakerPrice) {
+        cpc += 1;
+        cookies -= bakerPrice;
+        bakerPrice = Math.round(bakerPrice * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('bakerPriceText').innerHTML = "Baker Price: " + bakerPrice;
+        document.getElementById('cpc-text').innerHTML = "Cookies per Click: " + cpc;
+      } else {
+        alert('Your cookies are running low kind sir')
+      }
+    }
+ 
+    function hireAutoBaker() {
+      if(cookies >= 50) {
+        cookies -= 50;
+        cps += 1;
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+ 
+      }
+    }
+ 
+ 
+ 
+    setInterval(function() {
+      cookies += cps/fps;
+      document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+ 
+    }, 1000/fps)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  </script>
+
+  
+</body>
+</html>
