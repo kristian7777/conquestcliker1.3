@@ -1,146 +1,227 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-.item6 { grid-area: menu2; }
+  <style>
+    .item1 {
+      grid-area: header;
+    }
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu2 footer footer footer footer footer';
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
+    .item2 {
+      grid-area: menu;
+    }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-</style>
+    .item3 {
+      grid-area: main;
+    }
+
+    .item4 {
+      grid-area: right;
+    }
+
+    .item5 {
+      grid-area: footer;
+    }
+
+    .item6 {
+      grid-area: menu2;
+    }
+
+    .item7 {
+      grid-area: mapoptions;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header header header header header'
+        'menu main main main right right'
+        'menu2 menu2 menu2 menu2 menu2 menu2'
+        'footer footer footer footer footer footer'
+        'mapoptions mapoptions mapoptions mapoptions mapoptions mapoptions';
+
+
+      gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!--<h1>Grid Layout</h1>
+  <!--<h1>Grid Layout</h1>
 
 <p>This grid layout contains six columns and three rows:</p>-->
 
-<div class="grid-container">
-  <div class="item1">title</div>
-  <div class="item2"><p id="cookie-text">Cookies: 0</p>
- 
-    <button style="height:200px;width:200px"id="cookieImage" value="Bake a cookie" onClick='bakeCookie()'>Bake cookie button</button>
-  <!--<input id="cookieImage" type='button' value="Bake a cookie" onClick='bakeCookie()'> -->
-  <!--<button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>-->
-  <!--<input class='upgrade' type='button' value='Hire a Baker' onClick="hireBaker()">-->
-  <!--<button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker button</button>-->
-  <!--<input type="button" class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>-->
-  <!--<button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>-->
-  <!--<input class="upgrade" type='button' value='Hire an Auto Baker' onClick='hireAutoBaker()'>-->
+  <div class="grid-container">
+    <div class="item1">title</div>
+    <div class="item2">
+      <p id="cookie-text">Cookies: 0</p>
 
-  <br>
-  <p id='cpc-text'>Cookies per Click: 1</p>
-  <p id='cps-text'>Cookies per Second: 0</p>
- 
- 
-  <p id='bakerPriceText'>baker price=/</p></div>
-  <div class="item3">animation images</div>  
-  <div class="item4"><section>
-    <p algn="right">
-    <button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>
-    </p>
-    
-    <p algn="right">
-    <button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker button</button>
-    </p>
-    
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p>
-    <p algn="right">
-    <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>
-    </p></div>
-  <div class="item6">map info</div>
-  <div class="item5">map</div>
+      <button style="height:200px;width:200px" id="cookieImage" value="Bake a cookie" onClick='bakeCookie()'>Bake cookie
+        button</button>
+      <!--<input id="cookieImage" type='button' value="Bake a cookie" onClick='bakeCookie()'> -->
+      <!--<button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>-->
+      <!--<input class='upgrade' type='button' value='Hire a Baker' onClick="hireBaker()">-->
+      <!--<button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker button</button>-->
+      <!--<input type="button" class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>-->
+      <!--<button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire AutoBaker button</button>-->
+      <!--<input class="upgrade" type='button' value='Hire an Auto Baker' onClick='hireAutoBaker()'>-->
 
-</div>
+      <br>
+      <p id='cpc-text'>Cookies per Click: 1</p>
+      <p id='cps-text'>Cookies per Second: 0</p>
 
-<script>
+
+      <p id='bakerPriceText'>baker price=/</p>
+    </div>
+    <div class="item3">animation images</div>
+    <div class="item4">
+      <section>
+        <p algn="right">
+          <button class='upgrade' value='Hire a Baker' onClick="hireBaker()">hire baker button</button>
+        <p id='cost77txt'>scavanger price:</p>
+        </p>
+
+        <p algn="right">
+          <button class='upgrade' value='Hire a Super Baker' onClick='hireSuperBaker()'>hire SuperBaker</button>
+        <p id='cost88txt'>scavanger price:</p>
+        </p>
+
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker()'>hire Scavanger 50</button>
+        <p id='cost1txt'>scavanger price:50</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker2()'>hire peasant 250</button>
+        <p id='cost2txt'>peasant price:250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker3()'>hire plows man 1250</button>
+        <p id='cost3txt'>plows man price:1250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker4()'>hire woodcutter 6250</button>
+        <p id='cost4txt'>woodcutter price:6250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker5()'>hire Miller 31250</button>
+        <p id='cost5txt'>Miller price:31250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker6()'>hire smith 156250</button>
+        <p id='cost6txt'>smith price:156250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker7()'>hire Armourer 781250</button>
+        <p id='cost7txt'>Armourer price:781250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker8()'>hire shop owner 3906250</button>
+        <p id='cost8txt'>shop owner price:3906250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker9()'>hire traveling trader
+            19531250</button>
+        <p id='cost9txt'>traveling trader price:19531250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker10()'>hire cow herder
+            58593750</button>
+        <p id='cost10txt'>cow herder price:58593750</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker11()'>hire baker 175781250</button>
+        <p id='cost11txt'>Baker price:175781250</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker12()'>hire tavern owner
+            527343750</button>
+        <p id='cost12txt'>tavern owner price:527343750</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker13()'>hire Bard 1054687500</button>
+        <p id='cost13txt'>Bard price:1054687500</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker14()'>hire Highwayman
+            2109375000</button>
+        <p id='cost14txt'>Highwayman price:2109375000</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker15()'>hire money lender
+            4218750000</button>
+        <p id='cost15txt'>money lender price:4218750000</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker16()'>hire ship merchant
+            8437500000</button>
+        <p id='cost16txt'>ship merchant price:8437500000</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker17()'>hire banker
+            16875000000</button>
+        <p id='cost17txt'>banker price:16875000000</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker18()'>hire aristocrat
+            33750000000</button>
+        <p id='cost18txt'>aristocrat price:33750000000</p>
+        </p>
+        <p algn="right">
+          <button class="upgrade" value='Hire an Auto Baker' onClick='hireAutoBaker19()'>hire Count 9600000000</button>
+        <p id='cost19txt'>count price:9600000000</p>
+        </p>
+    </div>
+    <div class="item6">map info</div>
+    <div class="item5">map</div>
+    <div class="item7">map options</div>
+
+  </div>
+
+  <script>
     var cookies = 0;
     var cpc = 1;
     var cps = 0;
     var bakerPrice = 20;
+    var cost1 = 50;
+    var cost2 = 250;
+    var cost3 = 1250;
+    var cost4 = 6250;
+    var cost5 = 31250;
+    var cost6 = 156250;
+    var cost7 = 781250;
+    var cost8 = 3906250;
+    var cost9 = 19531250;
+    var cost10 = 58593750;
+    var cost11 = 175781250;
+    var cost12 = 527343750;
+    var cost13 = 1054687500;
+    var cost14 = 2109375000;
+    var cost15 = 4218750000;
+    var cost16 = 8437500000;
+    var cost17 = 16875000000;
+    var cost18 = 33750000000;
+    var cost19 = 67500000000;
     var superBakerPrice = 150;
     var developmentMode = true;
     const fps = 30;
- 
-    if(developmentMode === true) {
-      cookies = 100000000;
+
+    if (developmentMode === true) {
+      cookies = 0;
     }
- 
- 
+
+
     function hireSuperBaker() {
-      if(cookies >=  superBakerPrice) {
+      if (cookies >= superBakerPrice) {
         cookies -= superBakerPrice;
         cpc += 3;
         bakerPrice = Math.round(superBakerPrice * 1.1);
@@ -148,19 +229,19 @@
         document.getElementById('cpc-text').innerHTML = "Cookies per Click: " + cpc;
       }
     }
- 
- 
- 
- 
- 
+
+
+
+
+
     function bakeCookie() {
       cookies += cpc;
       document.getElementById('cookie-text').innerHTML = "Cookies: " + cookies;
- 
+
     }
- 
+
     function hireBaker() {
-      if(cookies >= bakerPrice) {
+      if (cookies >= bakerPrice) {
         cpc += 1;
         cookies -= bakerPrice;
         bakerPrice = Math.round(bakerPrice * 1.1);
@@ -171,34 +252,236 @@
         alert('Your cookies are running low kind sir')
       }
     }
- 
+
     function hireAutoBaker() {
-      if(cookies >= 50) {
-        cookies -= 50;
+      if (cookies >= cost1) {
+        cookies -= cost1;
         cps += 1;
+        cost1 = Math.round(cost1 * 1.1);
         document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost1txt').innerHTML = "scavanger price: " + cost1;
         document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
- 
+
       }
     }
- 
- 
- 
-    setInterval(function() {
-      cookies += cps/fps;
+    function hireAutoBaker2() {
+      if (cookies >= cost2) {
+        cookies -= cost2;
+        cps += 3;
+        cost2 = Math.round(cost2 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost2txt').innerHTML = "peasant price: " + cost2;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker3() {
+      if (cookies >= cost3) {
+        cookies -= cost3;
+        cps += 6;
+        cost3 = Math.round(cost3 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost3txt').innerHTML = "plows man price: " + cost3;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker4() {
+      if (cookies >= cost4) {
+        cookies -= cost4;
+        cps += 12;
+        cost4 = Math.round(cost4 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost4txt').innerHTML = "woodcutter price: " + cost4;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker5() {
+      if (cookies >= cost5) {
+        cookies -= cost5;
+        cps += 24;
+        cost5 = Math.round(cost5 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost5txt').innerHTML = "Miller price: " + cost5;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker6() {
+      if (cookies >= cost6) {
+        cookies -= cost6;
+        cps += 48;
+        cost6 = Math.round(cost6 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost6txt').innerHTML = "smith price: " + cost6;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker7() {
+      if (cookies >= cost7) {
+        cookies -= cost7;
+        cps += 96;
+        cost7 = Math.round(cost7 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost7txt').innerHTML = "Armourer price: " + cost7;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker8() {
+      if (cookies >= cost8) {
+        cookies -= cost8;
+        cps += 192;
+        cost8 = Math.round(cost8 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost8txt').innerHTML = "shop owner price: " + cost8;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker9() {
+      if (cookies >= cost9) {
+        cookies -= cost9;
+        cps += 384;
+        cost9 = Math.round(cost9 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost9txt').innerHTML = "traveling trader price: " + cost9;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker10() {
+      if (cookies >= cost10) {
+        cookies -= cost10;
+        cps += 768;
+        cost10 = Math.round(cost10 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost10txt').innerHTML = "cow herder price: " + cost10;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker11() {
+      if (cookies >= cost11) {
+        cookies -= cost11;
+        cps += 1536;
+        cost11 = Math.round(cost11 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost11txt').innerHTML = "Baker price: " + cost11;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker12() {
+      if (cookies >= cost12) {
+        cookies -= cost12;
+        cps += 3072;
+        cost12 = Math.round(cost12 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost12txt').innerHTML = "tavern owner price: " + cost12;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker13() {
+      if (cookies >= cost13) {
+        cookies -= cost13;
+        cps += 6144;
+        cost13 = Math.round(cost13 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost13txt').innerHTML = "Bard price: " + cost13;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker14() {
+      if (cookies >= cost14) {
+        cookies -= cost14;
+        cps += 12288;
+        cost14 = Math.round(cost14 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost14txt').innerHTML = "Highwayman price: " + cost14;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker15() {
+      if (cookies >= cost15) {
+        cookies -= cost15;
+        cps += 24576;
+        cost15 = Math.round(cost15 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost15txt').innerHTML = "money lender price: " + cost15;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker16() {
+      if (cookies >= cost16) {
+        cookies -= cost16;
+        cps += 49152;
+        cost16 = Math.round(cost16 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost16txt').innerHTML = "ship merchant price: " + cost16;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker17() {
+      if (cookies >= cost17) {
+        cookies -= cost17;
+        cps += 98304;
+        cost17 = Math.round(cost17 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost17txt').innerHTML = "banker price: " + cost17;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker18() {
+      if (cookies >= cost18) {
+        cookies -= cost18;
+        cps += 196608;
+        cost18 = Math.round(cost18 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost18txt').innerHTML = "aristocrat price: " + cost18;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+    function hireAutoBaker19() {
+      if (cookies >= cost19) {
+        cookies -= cost19;
+        cps += 393216;
+        cost19 = Math.round(cost19 * 1.1);
+        document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
+        document.getElementById('cost19txt').innerHTML = "count price: " + cost19;
+        document.getElementById('cps-text').innerHTML = "Cookies per Second: " + cps;
+
+      }
+    }
+
+
+
+
+    setInterval(function () {
+      cookies += cps / fps;
       document.getElementById('cookie-text').innerHTML = "Cookies: " + Math.round(cookies);
- 
-    }, 1000/fps)
- 
- 
- 
- 
- 
- 
- 
- 
+
+    }, 1000 / fps)
+
+
+
+
+
+
+
+
   </script>
 
-  
+
 </body>
+
 </html>
